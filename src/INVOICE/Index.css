@@ -1,0 +1,15 @@
+body{
+    background-color: #f1f1f1;
+}
+.footer{
+    margin: 0.5rem 0.2rem;
+}
+button{
+   user-select: none; 
+}
+label{
+    color: rgb(250, 91, 91);
+}
+ .p-tag{
+    color: rgb(250, 91, 91);
+ }
