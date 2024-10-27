@@ -51,7 +51,7 @@ export default function PayMethod() {
   }
   function deleteData(id) {
     axios
-      .delete(`http://localhost:3000/Paymethod/${id}`)
+      .delete(`https://kasimahmed.pythonanywhere.com/Paymethod/${id}`)
       .then((response) => {
         fetchData();
         setdata(data.filter((e) => e.id !== id));

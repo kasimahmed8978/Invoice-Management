@@ -16,7 +16,7 @@ export default function AddEmployee() {
   function addData(data, editable) {
     if (editable) {
       axios
-        .put(`http://localhost:3000/employee/${edit.id}`, data, {
+        .put(`https://kasimahmed.pythonanywhere.com/employee/${edit.id}`, data, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -31,7 +31,7 @@ export default function AddEmployee() {
         });
     } else {
       axios
-        .post(`http://localhost:3000/employee/`, data ,{
+        .post(`https://kasimahmed.pythonanywhere.com/employee/`, data ,{
           headers:{
             "Content-Type":"application/json"
           }
@@ -51,7 +51,7 @@ export default function AddEmployee() {
   }
   function deleteData(id) {
     axios
-      .delete(`http://localhost:3000/employee/${id}`)
+      .delete(`https://kasimahmed.pythonanywhere.com/employee/${id}`)
       .then((response) => {
         fetchData();
         setData(data.filter((e) => e.id !== id));
@@ -62,7 +62,7 @@ export default function AddEmployee() {
   }
   async function fetchData() {
     try {
-      const response = await axios.get(`http://localhost:3000/employee/`);
+      const response = await axios.get(`https://kasimahmed.pythonanywhere.com/employee/`);
       setData(response.data);
     } catch (error) {
       console.log("error getting data");

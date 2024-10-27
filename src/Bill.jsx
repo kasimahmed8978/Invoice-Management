@@ -9,7 +9,7 @@ const Invoice = () => {
   const [invoice, setInvoice] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/invoice')
+    axios.get('https://kasimahmed.pythonanywhere.com/invoice')
       .then(response => {
         setInvoice(response.data);
       })
